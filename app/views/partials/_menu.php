@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<ul class="menu text-center-xs pb-15-xs-important">
+<ul class="menu text-left-xs pb-15-xs-important">
 	<li class="lg text-uppercase <?if($path=='/new-in'):?>active<?endif;?> mb-20-important"><a href="/new-in">New in</a></li>
 	<?foreach($items as $item):?>
 		<li class="<?if($CurrentNode->id == $item['id'] or $CurrentNode->parent_id == $item['id']):?>active<?endif;?>">
