@@ -44,18 +44,16 @@
 
 					<div class="col-xs-12 col-sm-6">
 						<div style="margin-left: auto; margin-right: auto; max-width: 370px;">
-							<h2 class="h3 text-uppercase text-center"><b><?=$item['name']?></b></h2>
-							<div class="text-center">
+							<h1 class="h1 text-uppercase text-left"><b><?=$item['name']?></b></h1>
+							<div class="text-left">
 								<small>Product Code: <?=$item['reference']?></small>
 							</div>
 
-							<hr class="small">
-
 
 							<?if($item['available']):?>
-							<div class="mt-15 mb-15 text-warning text-center">
+							<div class="mt-15 mb-15 text-warning text-left">
 								<?if($item['price_with_sale']):?>
-									<h3><?=number_format($item['price_with_sale']);?> <?=$website_data['currency']?> (<strike><?=$item['price']?> <?=$website_data['currency']?></strike>)</h3>
+									<h3 class="h1"><?=number_format($item['price_with_sale']);?> <?=$website_data['currency']?> (<strike><?=$item['price']?> <?=$website_data['currency']?></strike>)</h3>
 								<?else:?>
 									<h3><?=number_format($item['price']);?> <?=$website_data['currency']?></h3>
 								<?endif;?>
@@ -64,7 +62,7 @@
 
 							<!-- Sizes -->
 							<?if($sizes and $item['available']):?>
-								<select name="size_id" class="form-control input-lg mt-30" required>
+								<select name="size_id" class="form-control mt-30" required>
 									<!-- <option value="" selected>Size</option> -->
 									<?foreach($sizes as $k=>$size):?>
 										<option value="<?=$size['id']?>"><?=$size['name']?></option>
@@ -80,7 +78,7 @@
 
 							<hr class="mt-50">
 
-							<div class="text-center text-muted">
+							<div class="text-left text-muted">
 								<?=$item['info']?>
 							</div>
 

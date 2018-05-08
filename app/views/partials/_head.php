@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="/asset/plugins/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
 	<script src="/asset/plugins/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="/asset/css/globals.css?19">
 </head>
