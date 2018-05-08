@@ -133,8 +133,8 @@ ul.menu .social li a:before 	{content: none;}
 	.table-middleware thead 								{display: none;}
 }
 
-
-
+.owl-thumb-item 				{cursor: pointer; margin-bottom: 15px; opacity: 1; transition: opacity 200ms;}
+.owl-thumb-item.active 			{opacity: .6}
 
 
 

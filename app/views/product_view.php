@@ -15,14 +15,27 @@
 					<div class="col-xs-12 col-sm-6">
 
 						<!-- Desktop/tablet -->
-						<div class="owl-carousel-navs container-fluid magnific-popup-wrapper hidden-xs">
-							<?foreach($images as $image):?>
-								<div class="product-image-thumb mb-10 magnific-item" href="/imglib<?=$image['image']?>">
-									<div class="image-section">
-										<img src="/imglib<?=$image['image']?>">
+						<div class="hidden-xs">
+							<div class="row">
+								<div class="col-sm-11 pr-0">
+									<div class="owl-carousel-navs container-fluid magnific-popup-wrapper" data-slider-id="1">
+										<?foreach($images as $image):?>
+											<div class="product-image-thumb mb-10 magnific-item" href="/imglib<?=$image['image']?>">
+												<div class="image-section">
+													<img src="/imglib<?=$image['image']?>">
+												</div>
+											</div>
+										<?endforeach;?>
 									</div>
 								</div>
-							<?endforeach;?>
+								<div class="col-sm-1 pl-0 pr-0">
+									<div class="owl-thumbs" data-slider-id="1">
+										<?foreach($images as $image):?>
+											<img class="owl-thumb-item img-responsive" src="/imglib<?=$image['image']?>">
+										<?endforeach;?>
+									</div>
+								</div>
+							</div>
 						</div>
 						<!-- / Desktop/tablet -->
 
@@ -113,7 +126,9 @@
 			items:1,
 			loop:false,
 			nav: true,
-			navRewind: false
+			navRewind: false,
+			thumbs: true,
+			thumbsPrerendered: true
 		});
 	});
 </script>
