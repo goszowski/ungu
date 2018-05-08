@@ -1,13 +1,14 @@
 <?if(! $section['inner']):?>
   <div class="alert alert-danger">Error</div>
 <?else:?>
-  <ul class="ungu-radio-icon">
-    <input type="hidden" name="delivery_option" value="<?=$section['inner'][0]['id']?>">
-    <?foreach($section['inner'] as $k=>$delivery):?>
-      <li data-value="<?=$delivery['id']?>" class="<?if($k==0):?>checked<?endif;?> <?if($delivery['affect_alternative']):?>affect_alternative<?endif;?>">
-        <span class="ungu-label"><?=$delivery['name']?></span>
-        <span class="ungu-icon"><img src="/imglib<?=$delivery['icon']?>" alt="" /></span>
-      </li>
-    <?endforeach;?>
-  </ul>
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+      <label for="delivery_option">Choice of deliery</label>
+      <select name="delivery_option" class="form-control" id="delivery_option">
+        <?foreach($section['inner'] as $k=>$delivery):?>
+          <option value="<?=$delivery['id']?>"><?=$delivery['name']?></option>
+        <?endforeach;?>
+      </select>
+    </div>
+  </div>
 <?endif;?>
