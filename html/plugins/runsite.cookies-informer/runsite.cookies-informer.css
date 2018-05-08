@@ -1,0 +1,14 @@
+.cookie-informer 					{position: fixed; z-index: 999; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid #ccc; box-shadow: 0 0 5px rgba(0,0,0, 0.3); border-top: 4px solid #f4c92f; transition: bottom 200ms; display: none;}
+.cookie-content-container 			{position: relative;}
+.cookie-informer-buttons 			{position: absolute; right: 0; top: 0; bottom: 0; font-size: 0;}
+.cookie-informer-buttons:before 	{display: inline-block; vertical-align: middle; height: 100%; content: '';}
+.cookie-informer-button 			{display: inline-block; vertical-align: middle; font-size: 18px; padding: 5px; width: 36px; text-align: center; color: #fff;}
+.cookie-informer-button.info 		{background: #f4c92f; border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
+.cookie-informer-button.accept 		{background: #22a72e; border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
+
+.cookie-informer-button:hover,
+.cookie-informer-button:active,
+.cookie-informer-button:focus 		{color: #fff;}
+
+.cookie-informer-button.info:hover 	{background: #f2cf54;}
+.cookie-informer-button.accept:hover{background: #3cb146;}

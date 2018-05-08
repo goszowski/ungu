@@ -1,0 +1,3 @@
+<?php 
+namespace Sync;
+require_once './runsite.sync/system/core.php';

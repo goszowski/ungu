@@ -1,0 +1,1 @@
+<textarea class="form-control input-sm" cols="40" rows="7" style="width:495px" name="<?=$CM_CONTROL_NAME?>"><?=prepareStringForXML($CM_PARAMS['strvalue'])?></textarea>

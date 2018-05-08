@@ -1,0 +1,68 @@
+<?include("prepend.php")?>
+<html>
+<meta HTTP-EQUIV="content-type" CONTENT="text/html; charset=<?=ADMIN_CHARSET?>">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Cache-Control" content="must-revalidate, post-check=0, pre-check=0">
+<meta http-equiv="pragma" content="no-cache">
+
+<title>Deeptree</title>
+<link rel="stylesheet" type="text/css" href="/admin/css.css">
+<link rel="stylesheet" type="text/css" href="/admin/mstree/deeptree.css">
+</head>
+
+<script>
+if (top.location == self.location) {
+	top.location.href = "/";
+}
+function selectstart() {
+	window.event.cancelBubble = true;
+	window.event.returnValue = false;
+	return false;
+}
+
+function reloadEl(imgObj, containerObj) {
+	if (imgObj.innerHTML.indexOf('-') != -1) {
+		imgObj.click();
+		imgObj.click();
+	}
+}
+
+function reloadTreeEl(nodeID) {
+	var imgObj = document.getElementById('img'+nodeID);
+	if (!imgObj) {
+		return false;
+	}
+
+	if (imgObj.innerHTML.indexOf('.') == -1) {
+		var containerObj = eval('cnt'+nodeID);
+		var labelObj = eval(nodeID);
+		//alert(labelObj.xmlsrc);
+		containerObj.innerHTML ='';
+		reloadEl(imgObj, containerObj);
+	}
+	return true;
+}
+
+function reloadTreeElForPrevOrNext(nodeID, page) {
+	var imgObj = document.getElementById('imgtree'+nodeID);
+	var containerObj = eval('cnttree'+nodeID);
+	var labelObj = eval('tree'+nodeID);
+	labelObj.xmlsrc = "/admin/xmlTreeGenerator.php?nodeid="+nodeID+"&page="+page
+	containerObj.innerHTML ='';
+	reloadEl(imgObj, containerObj);
+}
+
+</script>
+
+<body onselectstart="selectstart();" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 class=tree>
+
+<nobr>
+<?$root = Node::findRoot();?>
+<!-- <div align="right" style="position:absolute; width:100%"><a href="ReloadTree" onClick="reloadTreeEl(<?=$root->id?>); return false;"><img src="/admin/_img/reload_g.gif" vspace=3 hspace=3 width="13" height="16" alt="Reload Tree" border="0"></a></div> -->
+
+<div id="cmtree" class="deeptree" CfgXMLSrc="/admin/mstree/deeptreeconfig_xml.php<?if ($request->getParameter("selected_id")!=null) {?>?selected_id=<?=$request->getParameter("selected_id")?><?}?>">
+</div>
+</nobr>
+
+</body>
+</html>

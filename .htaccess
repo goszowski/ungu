@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteBase /
+
+RewriteCond     %{REQUEST_FILENAME}     !-f
+RewriteCond     %{REQUEST_FILENAME}     !-d
+RewriteCond     %{REQUEST_URI} !^(/admin.*|/index.php*)
+
+RewriteRule     ^(.*) index.php?%{QUERY_STRING} [L,E=REQUEST_URI:/index.php/$1]
+
+ErrorDocument 401 /

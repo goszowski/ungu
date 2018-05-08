@@ -1,0 +1,1 @@
+<input class="form-control input-sm" style="width: 200px;" type="text" size="20" value="<?=prepareStringForXML($CM_PARAMS['strvalue'])?>" name="<?=$CM_CONTROL_NAME?>">
