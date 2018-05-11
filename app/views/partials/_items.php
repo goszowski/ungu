@@ -5,7 +5,12 @@
 <?else:?>
 <div class="container-fluid pl-1-xs pr-1-xs">
 	<div class="row">
-		<?foreach($items as $item):?>
+		<?foreach($items as $k=>$item):?>
+
+		<?if($k and $k%2 == 0):?>
+			</div><div class="row">
+		<?endif;?>
+
 		<div class="col-xs-12 col-sm-6 mb-30 pl-1-xs pr-1-xs">
 			<a class="product-list-item" href="<?=$item['absolute_path']?>">
 				<div class="image-section">
