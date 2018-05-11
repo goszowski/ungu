@@ -17,15 +17,17 @@
 	</div>
 </div>
 
-<ul class="menu text-left-xs pb-15-xs-important">
-	<li class="lg text-uppercase <?if($path=='/new-in'):?>active<?endif;?> mb-20-important"><a href="/new-in">New in</a></li>
-	<?foreach($items as $item):?>
-		<li class="<?if($CurrentNode->id == $item['id'] or $CurrentNode->parent_id == $item['id']):?>active<?endif;?>">
-			<a href="<?=$item['absolute_path']?>"><?=$item['name']?></a>
-		</li>
-	<?endforeach;?>
-	<li class="text-uppercase line-red <?if($path=='/sales'):?>active<?endif;?>"><a href="/sales">Sales</a></li>
-	<li class="text-uppercase <?if($path=='/contact'):?>active<?endif;?>"><a href="/contact">Contact</a></li>
+<ul class="menu text-center-xs pb-15-xs-important">
+	<div class="magic-centered text-left-xs">
+		<li class="lg text-uppercase <?if($path=='/new-in'):?>active<?endif;?> mb-20-important"><a href="/new-in">New in</a></li>
+		<?foreach($items as $item):?>
+			<li class="<?if($CurrentNode->id == $item['id'] or $CurrentNode->parent_id == $item['id']):?>active<?endif;?>">
+				<a href="<?=$item['absolute_path']?>"><?=$item['name']?></a>
+			</li>
+		<?endforeach;?>
+		<li class="text-uppercase line-red <?if($path=='/sales'):?>active<?endif;?>"><a href="/sales">Sales</a></li>
+		<li class="text-uppercase <?if($path=='/contact'):?>active<?endif;?>"><a href="/contact">Contact</a></li>
+	</div>
 
 	<div class="visible-xs">
 		<?use_controller('partials/_social');?>
