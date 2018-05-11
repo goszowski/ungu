@@ -66,7 +66,7 @@
 							<?if($item['available']):?>
 							<div class="mt-15 mb-15 text-warning text-left">
 								<?if($item['price_with_sale']):?>
-									<h3 class="h1"><?=number_format($item['price_with_sale']);?> <?=$website_data['currency']?> (<strike><?=$item['price']?> <?=$website_data['currency']?></strike>)</h3>
+									<h3 class="h2"><?=number_format($item['price_with_sale']);?> <?=$website_data['currency']?> (<strike><?=$item['price']?> <?=$website_data['currency']?></strike>)</h3>
 								<?else:?>
 									<h3><?=number_format($item['price']);?> <?=$website_data['currency']?></h3>
 								<?endif;?>
