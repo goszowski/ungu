@@ -30,7 +30,7 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" type="text/css" href="/asset/css/globals.css?20">
+	<link rel="stylesheet" type="text/css" href="/asset/css/globals.css?21">
 </head>
 <body>
 <?=$website_data['ga_code'];?>

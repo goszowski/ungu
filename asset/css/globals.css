@@ -25,7 +25,7 @@ ul.menu li a:hover:before 		{display: block;}
 	ul.menu li.lg a 			{font-size: 27px;}
 }
 @media (max-width: 767px) {
-	ul.menu 					{display: none;}
+	ul.menu 					{display: none; margin-top: 40px;}
 	ul.menu.active 				{display: block;}
 	ul.menu li a 				{font-size: 20px;}
 	ul.menu li.lg a 			{font-size: 30px; padding: 6px;}

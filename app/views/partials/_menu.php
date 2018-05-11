@@ -29,7 +29,7 @@
 		<li class="text-uppercase <?if($path=='/contact'):?>active<?endif;?>"><a href="/contact">Contact</a></li>
 	</div>
 
-	<div class="visible-xs">
+	<div class="visible-xs pt-15-xs">
 		<?use_controller('partials/_social');?>
 	</div>
 
