@@ -1,4 +1,8 @@
 <?php
+require_once ($_SERVER["DOCUMENT_ROOT"]. "/vendor/autoload.php");
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotenv->load();
+
 require_once($_SERVER["DOCUMENT_ROOT"]. "/_CORE/prepend.php");
 
 Header("Content-Type: text/html; charset=" . ADMIN_CHARSET);
